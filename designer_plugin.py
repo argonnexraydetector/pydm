@@ -2,6 +2,7 @@ print("Loading PyDM Widgets")
 from pydm.widgets.checkbox_qtplugin import PyDMCheckboxPlugin
 from pydm.widgets.embedded_display_qtplugin import PyDMEmbeddedDisplayPlugin
 from pydm.widgets.image_qtplugin import PyDMImageViewPlugin
+from pydm.widgets.adimage_qtplugin import PyDMADImageViewPlugin
 from pydm.widgets.indicator_qtplugin import PyDMIndicatorPlugin
 from pydm.widgets.label_qtplugin import PyDMLabelPlugin
 from pydm.widgets.line_edit_qtplugin import PyDMLineEditPlugin
