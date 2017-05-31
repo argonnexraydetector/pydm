@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>884</width>
+    <height>797</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>520</y>
+     <width>811</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Connection</string>
+    </attribute>
+    <widget class="PyDMPushButton" name="PyDMPushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>121</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+    
+    Parameters
+    ----------
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+    
+    channel : str
+        ID of channel to manipulate
+
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+
+    relative : bool, optional
+        Choice to have the button peform a relative put, instead of always
+        setting to an absolute value
+    </string>
+     </property>
+     <property name="text">
+      <string>Connect Roach</string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:Connect</string>
+     </property>
+     <property name="pressValue" stdset="0">
+      <string>1</string>
+     </property>
+     <property name="relativeChange" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="PyDMLineEdit" name="PyDMLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>146</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Writeable text field to send and display channel values
+    </string>
+     </property>
+     <property name="text">
+      <string>192.168.0.70</string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:ipaddress</string>
+     </property>
+    </widget>
+    <widget class="PyDMPushButton" name="PyDMPushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>121</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+    
+    Parameters
+    ----------
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+    
+    channel : str
+        ID of channel to manipulate
+
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+
+    relative : bool, optional
+        Choice to have the button peform a relative put, instead of always
+        setting to an absolute value
+    </string>
+     </property>
+     <property name="text">
+      <string>Shut Roach</string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:Disconnect</string>
+     </property>
+     <property name="pressValue" stdset="0">
+      <string>1</string>
+     </property>
+     <property name="relativeChange" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="PyDMPushButton" name="PyDMPushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>70</y>
+       <width>121</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+    
+    Parameters
+    ----------
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+    
+    channel : str
+        ID of channel to manipulate
+
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+
+    relative : bool, optional
+        Choice to have the button peform a relative put, instead of always
+        setting to an absolute value
+    </string>
+     </property>
+     <property name="text">
+      <string>RefreshPlot</string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:Refresh</string>
+     </property>
+     <property name="pressValue" stdset="0">
+      <string>1</string>
+     </property>
+     <property name="relativeChange" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="PyDMPythonCommand" name="PyDMPythonCommand">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>20</y>
+       <width>101</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>maddog</string>
+     </property>
+     <property name="command">
+      <string>print 'maddog'</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Sweep</string>
+    </attribute>
+    <widget class="PyDMLineEdit" name="PyDMLineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>90</y>
+       <width>61</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Writeable text field to send and display channel values
+    </string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:Span</string>
+     </property>
+    </widget>
+    <widget class="PyDMLineEdit" name="PyDMLineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>61</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Writeable text field to send and display channel values
+    </string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:Center</string>
+     </property>
+    </widget>
+    <widget class="PyDMLineEdit" name="PyDMLineEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>61</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Writeable text field to send and display channel values
+    </string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:NumSweepPoints</string>
+     </property>
+    </widget>
+    <widget class="PyDMPushButton" name="PyDMPushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>121</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+    
+    Parameters
+    ----------
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+    
+    channel : str
+        ID of channel to manipulate
+
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+
+    relative : bool, optional
+        Choice to have the button peform a relative put, instead of always
+        setting to an absolute value
+    </string>
+     </property>
+     <property name="text">
+      <string>StartSweep</string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:StartSweep</string>
+     </property>
+     <property name="pressValue" stdset="0">
+      <string>1</string>
+     </property>
+     <property name="relativeChange" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="PyDMPushButton" name="PyDMPushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>121</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+    
+    Parameters
+    ----------
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+    
+    channel : str
+        ID of channel to manipulate
+
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+
+    relative : bool, optional
+        Choice to have the button peform a relative put, instead of always
+        setting to an absolute value
+    </string>
+     </property>
+     <property name="text">
+      <string>StopRun</string>
+     </property>
+     <property name="channel" stdset="0">
+      <string>ca://DP:roach1:StopRun</string>
+     </property>
+     <property name="pressValue" stdset="0">
+      <string>1</string>
+     </property>
+     <property name="relativeChange" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Span MHz</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Center MHz</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>NumPts</string>
+     </property>
+    </widget>
+    <widget class="PyDMCheckbox" name="PyDMCheckbox_2">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>30</y>
+       <width>81</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>BBLoop</string>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:BBLoop</string>
+     </property>
+    </widget>
+    <widget class="PyDMCheckbox" name="PyDMCheckbox_4">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>10</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>ExtLO</string>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:ExtLO</string>
+     </property>
+    </widget>
+    <widget class="PyDMSlider" name="PyDMSlider_3">
+     <property name="geometry">
+      <rect>
+       <x>453</x>
+       <y>160</y>
+       <width>311</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="minimum" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="maximum" stdset="0">
+      <double>31.000000000000000</double>
+     </property>
+     <property name="num_steps" stdset="0">
+      <number>32</number>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:AttenU28</string>
+     </property>
+    </widget>
+    <widget class="PyDMSlider" name="PyDMSlider">
+     <property name="geometry">
+      <rect>
+       <x>453</x>
+       <y>50</y>
+       <width>311</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="minimum" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="maximum" stdset="0">
+      <double>31.000000000000000</double>
+     </property>
+     <property name="num_steps" stdset="0">
+      <number>32</number>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:AttenU6</string>
+     </property>
+    </widget>
+    <widget class="PyDMSlider" name="PyDMSlider_2">
+     <property name="geometry">
+      <rect>
+       <x>453</x>
+       <y>100</y>
+       <width>311</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="minimum" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="maximum" stdset="0">
+      <double>31.000000000000000</double>
+     </property>
+     <property name="num_steps" stdset="0">
+      <number>32</number>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:AttenU7</string>
+     </property>
+    </widget>
+    <widget class="PyDMCheckbox" name="PyDMCheckbox_5">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>30</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>FPGALoop</string>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:FPGALoop</string>
+     </property>
+    </widget>
+    <widget class="PyDMCheckbox" name="PyDMCheckbox_3">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>10</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>RFLoop</string>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:RFLoop</string>
+     </property>
+    </widget>
+    <widget class="PyDMCheckbox" name="PyDMCheckbox">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>10</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>RFOutEn</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>70</y>
+       <width>62</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>U6 (out)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>120</y>
+       <width>62</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>U7 (out)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>180</y>
+       <width>62</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>U28 (in)</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>ResData</string>
+    </attribute>
+    <widget class="PyDMLineEdit" name="PyDMLineEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>741</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string>
+    Writeable text field to send and display channel values
+    </string>
+     </property>
+     <property name="channel" stdset="0">
+      <string notr="true">ca://DP:roach1:ResListText</string>
+     </property>
+     <property name="usePrecision" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userFormat" stdset="0">
+      <string notr="true">None</string>
+     </property>
+    </widget>
+    <widget class="PyDMLabel" name="PyDMLabel_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>741</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>res freq list</string>
+     </property>
+     <property name="channel">
+      <string>ca://DP:roach1:ResListText_RBV</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Noise/IV</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>811</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Mag and Ph</string>
+    </attribute>
+    <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>771</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="yChannel">
+      <string>ca://DP:roach1:FreqSweepMag</string>
+     </property>
+     <property name="xChannel">
+      <string>ca://DP:roach1:SweepFreqs</string>
+     </property>
+    </widget>
+    <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>240</y>
+       <width>771</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="yChannel">
+      <string>ca://DP:roach1:FreqSweepPhase</string>
+     </property>
+     <property name="xChannel">
+      <string>ca://DP:roach1:SweepFreqs</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>I and Q</string>
+    </attribute>
+    <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>240</y>
+       <width>771</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="yChannel">
+      <string>ca://DP:roach1:FreqSweepQ</string>
+     </property>
+     <property name="xChannel">
+      <string>ca://DP:roach1:SweepFreqs</string>
+     </property>
+    </widget>
+    <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>771</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="yChannel">
+      <string>ca://DP:roach1:FreqSweepI</string>
+     </property>
+     <property name="xChannel">
+      <string>ca://DP:roach1:SweepFreqs</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <attribute name="title">
+     <string>I v Q</string>
+    </attribute>
+    <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_5">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>451</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="yChannel">
+      <string>ca://DP:roach1:FreqSweepQ</string>
+     </property>
+     <property name="xChannel">
+      <string>ca://DP:roach1:FreqSweepI</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="PyDMLabel" name="PyDMLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>770</y>
+     <width>811</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="text">
+    <string>Status</string>
+   </property>
+   <property name="channel">
+    <string>ca://DP:roach1:RoachStatMessage</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMSlider</class>
+   <extends>QFrame</extends>
+   <header>pydm.widgets.slider</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMPushButton</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.pushbutton</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMWaveformPlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.waveformplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMPythonCommand</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.python_command</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMCheckbox</class>
+   <extends>QCheckBox</extends>
+   <header>pydm.widgets.checkbox</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

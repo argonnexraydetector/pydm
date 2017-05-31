@@ -41,6 +41,9 @@ class Connection(PyDMConnection):
   @pyqtSlot(float)
   @pyqtSlot(str)
   def put_value(self, new_val):
+    print "put_value"
+    print new_val
+    
     self.pv.put(new_val)
   
   @pyqtSlot(np.ndarray)
