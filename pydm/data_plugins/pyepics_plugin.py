@@ -11,7 +11,7 @@ class Connection(PyDMConnection):
     print "connecting epics chan %s"%pv
   
   def send_new_value(self, pvname=None, value=None, char_value=None, units=None, enum_strs=None, severity=None, count=None, write_access=None, ftype=None, *args, **kws):
-    #print "%s -> %d"%(pvname, value)
+    #print "EPICS sendvalue %s -> %s"%(pvname, value)
     if severity != None:
       self.new_severity_signal.emit(int(severity))
     if write_access != None:
@@ -26,12 +26,16 @@ class Connection(PyDMConnection):
     if count > 1:
       self.new_waveform_signal.emit(value)
     else:
-      if ftype in (epics.dbr.INT, epics.dbr.CTRL_INT, epics.dbr.TIME_INT, epics.dbr.ENUM, epics.dbr.CTRL_ENUM, epics.dbr.TIME_ENUM):
+      if ftype in (epics.dbr.INT, epics.dbr.CTRL_INT, epics.dbr.TIME_INT, epics.dbr.ENUM, epics.dbr.CTRL_ENUM,
+      epics.dbr.TIME_ENUM,epics.dbr.TIME_LONG,epics.dbr.LONG,epics.dbr.CTRL_LONG):
         self.new_value_signal[int].emit(int(value))
+	#print 'EPICS sendvalue int'
       elif ftype in (epics.dbr.CTRL_FLOAT, epics.dbr.FLOAT, epics.dbr.TIME_FLOAT, epics.dbr.CTRL_DOUBLE, epics.dbr.DOUBLE, epics.dbr.TIME_DOUBLE):
         self.new_value_signal[float].emit(float(value))
+	#print 'EPICS sendvalue float'
       else:
         self.new_value_signal[str].emit(char_value)
+	#print 'EPICS sendvalue str'
     
       
   def send_connection_state(self, pvname=None, conn=None, *args, **kws):
