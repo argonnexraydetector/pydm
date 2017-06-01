@@ -22,8 +22,7 @@ class PyDMLineEdit(QLineEdit):
         super(PyDMLineEdit, self).__init__(parent)
         self._value       = None
         self._display     = None
-        #!!tjm
-        self._channeltype = str
+        self._channeltype = None
         self._channel     = channel
 
         self._useprec    = True
@@ -172,10 +171,6 @@ class PyDMLineEdit(QLineEdit):
             send_value = (self._channeltype(send_value)
                           / self._channeltype(self._scale))
          
-        
-        print  self._channeltype
-        print self._channeltype(send_value)
-        
         self.send_value_signal[self._channeltype].emit(self._channeltype(send_value))
    
     

@@ -608,6 +608,43 @@
     <string>ca://GER1:image1:ArrayData</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>371</x>
+     <y>150</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Server Ver.</string>
+   </property>
+  </widget>
+  <widget class="PyDMLineEdit" name="PyDMLineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>150</y>
+     <width>51</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string>
+    Writeable text field to send and display channel values
+    </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="channel" stdset="0">
+    <string>ca://GER1:cam1:GeServerType</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>
