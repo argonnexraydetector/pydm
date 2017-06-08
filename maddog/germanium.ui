@@ -645,6 +645,30 @@
     <string>ca://GER1:cam1:GeServerType</string>
    </property>
   </widget>
+  <widget class="PyDMLineEdit" name="PyDMLineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>20</y>
+     <width>171</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string>
+    Writeable text field to send and display channel values
+    </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="channel" stdset="0">
+    <string>ca://GER1:cam1:GeServerString</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>

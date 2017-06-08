@@ -47,14 +47,14 @@ class PyDMWaveformSmartPlot(BasePlot):
   
   def redrawPlot(self):
 
-    self.pycall ="self.newwave = %s(self.x_waveform, self.y_waveform)"%(self._pyfunction)
+    self.pycall ="(self.newwavex,self.newwavey) = %s(self.x_waveform, self.y_waveform)"%(self._pyfunction)
     
-    print self.pycall
+    #print self.pycall
 
     exec(self.pycall)
 
     self.updateAxes()
-    self.curve.setData(x=self.newwave, y=self.y_waveform)
+    self.curve.setData(x=self.newwavex, y=self.newwavey)
   
   # -2 to +2, -2 is LOLO, -1 is LOW, 0 is OK, etc.  
   @pyqtSlot(int)
